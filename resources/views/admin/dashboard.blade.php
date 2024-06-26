@@ -5,28 +5,47 @@
   <h1>Dashboard</h1>
   <div class="stats">
     <div class="stat">
+      <img src="{{ asset('icons/orders-pending.png') }}" alt="Pending">
       <h3>40,689</h3>
       <p>Pending</p>
       <span>8.5% Up from yesterday</span>
     </div>
     <div class="stat">
+      <img src="{{ asset('icons/orders-in-production.png') }}" alt="in Production">
       <h3>10,293</h3>
       <p>In Production</p>
       <span>1.3% Up from past week</span>
     </div>
     <div class="stat">
+      <img src="{{ asset('icons/orders-on-hold.png') }}" alt="on Hold">
       <h3>89,000</h3>
       <p>On Hold</p>
       <span>4.3% Down from yesterday</span>
     </div>
     <div class="stat">
+      <img src="{{ asset('icons/orders-ready.png') }}" alt="Ready">
       <h3>2,040</h3>
       <p>Ready to Ship</p>
       <span>1.8% Up from yesterday</span>
     </div>
   </div>
   <div class="orders">
-    <h2>List of Orders</h2>
+    <div class="orders-top">
+      <h2>List of Orders</h2>
+      <div class="orders-filter">
+        <div class="orders-search">
+          <input type="text" placeholder="Search">
+          <img src="{{ asset('icons/search.png') }}" alt="Search Icon" class="search-icon">
+        </div>
+        <div class="sort-dropdown">
+          <select class="sort-select">
+            <option value="" disabled selected>Sort By</option>
+            <option value="oldest">Oldest</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+    </div>
     <table>
       <thead>
         <tr>
@@ -64,7 +83,17 @@
   </div>
   <div class="team-workstations">
     <div class="team">
-      <h2>Team</h2>
+      <div class="team-top">
+        <h2>Team</h2>
+        <div class="sort-dropdown">
+          <select class="sort-select">
+            <option value="week" selected>Week</option>
+            <option value="day">Day</option>
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+          </select>
+        </div>
+      </div>
       <table>
         <thead>
           <tr>
@@ -93,7 +122,17 @@
       </table>
     </div>
     <div class="workstations">
-      <h2>Workstations</h2>
+      <div class="workstations-top">
+        <h2>Workstations</h2>
+        <div class="sort-dropdown">
+          <select class="sort-select">
+            <option value="week" selected>Week</option>
+            <option value="day">Day</option>
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+          </select>
+        </div>
+      </div>
       <table>
         <thead>
           <tr>

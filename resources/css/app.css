@@ -5,7 +5,7 @@
 /* LOGIN */
 /* body {
   background-color: #f8f9fa;
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,16 +13,23 @@
   margin: auto 0;
 } */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 
 
 body {
   background-color: #f8f9fa;
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   display: flex;
+}
+
+h1, h2 {
+  margin-top: 0;
 }
 
 .login-container {
@@ -137,7 +144,7 @@ button:hover {
 }
 
 .sidebar-menu img {
-  margin: 0 20px;
+  margin: 0 20px 0 30px;
 
 }
 
@@ -159,10 +166,20 @@ button:hover {
   background-color: #f8f9fa;
 }
 
+.sidebar-menu li a.active {
+  background-color: #BD7F7F;
+  color: #fff;
+}
+
+.sidebar-menu li a:hover img,
+.sidebar-menu li a.active img {
+  filter: brightness(0) invert(1);
+}
+
 /* HEADER */
 .header {
   background-color: #fff;
-  padding: 20px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -171,11 +188,26 @@ button:hover {
   z-index: 1000;
 }
 
+.header-search, .orders-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .header-search input {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ced4da;
-  width: 300px; 
+  padding: 10px 20px;
+  padding-left: 45px;
+  border-radius: 20px;
+  background-color: #F5F6FA;
+  border: .5px solid #ced4da;
+  width: 380px; 
+}
+
+.header-search .search-icon, .orders-search .search-icon {
+  position: absolute;
+  left: 15px;
+  width: 20px;
+  height: 20px;
 }
 
 .header-user {
@@ -189,7 +221,7 @@ button:hover {
 
 /* CONTENT */
 .content {
-  padding: 20px;
+  padding: 30px;
     
 }
 
@@ -197,29 +229,105 @@ button:hover {
 .dashboard .stats {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
 }
 
 .dashboard .stat {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 30px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 23%;
-  text-align: center;
+  text-align: right;
+  position: relative;
+}
+
+.dashboard .stat img {
+  position: absolute;
+  left: 30px;
 }
 
 .dashboard .stat h3 {
+  font-size: 28px;
+  font-weight: 700;
   margin: 0;
 }
 
 .dashboard .orders, .dashboard .team, .dashboard .workstations {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 30px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin-top: 30px;
 }
+
+.orders-top, .team-top, .workstations-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orders-filter {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.orders-search input {
+  padding: 10px 20px;
+  padding-left: 45px;
+  border-radius: 20px;
+  background-color: #F5F6FA;
+  border: .5px solid #ced4da;
+  width: 260px;
+}
+
+
+/* Styling the Sort By dropdown menu */
+.sort-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.sort-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #FCFDFD;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: .5px solid #ced4da;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 120px;
+}
+
+.sort-select:hover {
+  background-color: #F5F6FA;
+}
+
+.sort-select:focus {
+  outline: none;
+  background-color: #F5F6FA;
+}
+
+.sort-dropdown::after {
+  content: "V";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #000;
+}
+
+/* Option styling if needed */
+.sort-select option {
+  padding: 10px;
+}
+
 
 .dashboard table {
   width: 100%;
@@ -228,19 +336,24 @@ button:hover {
 }
 
 .dashboard table th, .dashboard table td {
-  padding: 10px;
-  border: 1px solid #dee2e6;
+  padding: 15px 20px;
+  border: none;
 }
 
-.dashboard table th {
+/* .dashboard table th {
   background-color: #BD7F7F;
   color: #fff;
+  border-radius: 15px 15px 0 0;
+} */
+
+.dashboard table tbody th, .dashboard table tbody td {
+  padding: 25px 20px;
 }
 
 .team-workstations {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
 }
 
 .team-workstations .team {
@@ -253,14 +366,14 @@ button:hover {
 
 
 /* ORDERS */
-.orders {
+/* .orders {
   margin-top: 20px;
-}
+} */
 
-.orders h1 {
+/* .orders h1 {
   font-size: 24px;
   margin-bottom: 20px;
-}
+} */
 
 .filters {
   display: flex;
@@ -291,10 +404,38 @@ table {
   margin-top: 10px;
 }
 
+table thead {
+  overflow: hidden;
+}
+
 table th,
 table td {
   padding: 10px;
   border: 1px solid #dee2e6;
+}
+
+
+.dashboard .orders table td {
+  padding: 25px 20px;
+}
+
+.dashboard .team table td {
+  padding: 25px 20px;
+}
+
+.orders table tbody th,
+.orders table tbody td {
+  padding: 20px 20px;
+}
+
+.team table tbody th,
+.team table tbody td {
+  padding: 20px 20px;
+}
+
+.workstations table tbody th,
+.workstations table tbody td {
+  padding: 25px 20px;
 }
 
 table th {
@@ -333,7 +474,7 @@ table th {
 /* SETTINGS */
 .settings {
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .settings-menu {
@@ -343,8 +484,8 @@ table th {
   height: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
-  top: 200px;
-  left: 285px;
+  top: 175px;
+  left: 280px;
   border-radius: 8px;
 }
 
@@ -376,8 +517,13 @@ table th {
   color: #fff;
 }
 
+.settings-menu li a:hover img,
+.settings-menu li a.active img {
+  filter: brightness(0) invert(1);
+}
+
 .settings-content {
-  margin-left: 215px;
+  margin-left: 198px;
   flex-grow: 1;
 }
 
@@ -385,6 +531,7 @@ table th {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 70px;
 }
 
 .manage-btm {
@@ -419,6 +566,14 @@ tbody {
   gap: 10px;
 }
 
+table thead th:first-child {
+  border-top-left-radius: 15px;
+}
+
+table thead th:last-child {
+  border-top-right-radius: 15px;
+}
+
 table th,
 table td {
   padding: 15px 20px;
@@ -441,7 +596,8 @@ table thead tr {
 table tr {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ced4da;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
 table thead tr:first-child {

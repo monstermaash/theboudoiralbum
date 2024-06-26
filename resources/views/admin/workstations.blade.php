@@ -3,34 +3,6 @@
 @section('content')
 <div class="workstations">
   <h1>Workstations</h1>
-  <div class="filters">
-    <div class="filter-item">
-      <button class="filter-btn">
-        <img src="{{ asset('icons/filter.png') }}" alt="Filter Icon">
-        <span>Filter By</span>
-      </button>
-    </div>
-    <div class="filter-item">
-      <select class="filter-select">
-        <option>Date</option>
-      </select>
-    </div>
-    <div class="filter-item">
-      <select class="filter-select">
-        <option>Product</option>
-      </select>
-    </div>
-    <div class="filter-item">
-      <select class="filter-select">
-        <option>Order Status</option>
-      </select>
-    </div>
-    <div class="filter-item">
-      <button class="reset-btn">
-        <img src="{{ asset('icons/reset.png') }}" alt="Reset">Reset Filter
-      </button>
-    </div>
-  </div>
   <table>
     <thead>
       <tr>
