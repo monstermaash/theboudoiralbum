@@ -71,7 +71,6 @@
         </tbody>
       </table>
 
-      <!-- Modal component for creating a new status -->
       <x-modal id="createStatusModal" title="Create New Status">
         <form>
           <div class="form-group name">
@@ -95,7 +94,6 @@
         </x-slot>
       </x-modal>
 
-      <!-- Modal component for editing a status -->
       <x-modal id="editStatusModal" title="Edit Status">
         <form>
           <div class="form-group name">

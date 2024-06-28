@@ -5,9 +5,6 @@
   <h1>Order List</h1>
   <div class="filters">
 
-    <!-- Trigger button -->
-    <!-- <button data-open-modal="orderModal">Open Order Modal</button> -->
-
     <div class="filter-item">
       <button class="filter-btn">
         <img src="{{ asset('icons/filter.png') }}" alt="Filter Icon">
@@ -119,7 +116,6 @@
     </tbody>
   </table>
 
-  <!-- Modal component for order details -->
   <x-modal id="orderModal" title="Order #00001">
     <span class="status completed">Completed</span>
     <div class="orderModal-flex">

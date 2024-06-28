@@ -58,7 +58,6 @@
     </tbody>
   </table>
 
-  <!-- Modal component for workstation details -->
   <x-modal id="workstationModal" title="Workstation #4">
     <div class="workstation-details">
       <div class="search-container">

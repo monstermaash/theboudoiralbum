@@ -1,21 +1,4 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-/* LOGIN */
-/* body {
-  background-color: #f8f9fa;
-  font-family: 'Nunito Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: auto 0;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
-
 
 body {
   background-color: #F5F6FA;
@@ -116,7 +99,6 @@ h1, h2 {
 }
 
 button {
-  /* width: 100%; */
   padding: 10px;
   border: none;
   font-size: 14px;
@@ -278,7 +260,6 @@ button {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 23%;
-  /* text-align: right; */
   position: relative;
 }
 

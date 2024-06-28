@@ -71,7 +71,6 @@
         </tbody>
       </table>
 
-      <!-- Modal component for creating a new email template -->
       <x-modal id="createEmailModal" title="Create New Template">
         <form>
           <div class="form-group">
@@ -82,7 +81,6 @@
             <label for="associated-status">Associated Status</label>
             <select id="associated-status" name="associated-status">
               <option value="">Select an option</option>
-              <!-- Add options as necessary -->
             </select>
           </div>
           <div class="form-group">
@@ -101,7 +99,6 @@
         <x-slot name="footer"></x-slot>
       </x-modal>
 
-      <!-- Modal component for editing an email template -->
       <x-modal id="editEmailModal" title="Edit Template">
         <form>
           <div class="form-group">
@@ -112,7 +109,6 @@
             <label for="edit-associated-status">Associated Status</label>
             <select id="edit-associated-status" name="edit-associated-status">
               <option value=""></option>
-              <!-- Add options as necessary -->
             </select>
           </div>
           <div class="form-group">
