@@ -123,6 +123,5 @@
       <button class="btn cancel-btn" onclick="document.getElementById('workstationModal').style.display='none'">Cancel</button>
     </x-slot>
   </x-modal>
-  <!-- @include('partials.footer', ['from' => 1, 'to' => 7, 'total' => 7]) -->
 </div>
 @endsection
