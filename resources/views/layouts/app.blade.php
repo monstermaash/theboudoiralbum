@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <!-- tinymce -->
-    <!-- <script src="https://cdn.tiny.cloud/1/67ldg66kokeebemvaix2hwu9iu3gou1btkdl63h3wxexo5ki/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
     <!-- ckeditor -->
     <script src="https://cdn.ckeditor.com/4.17.0/standard/ckeditor.js"></script>
     <!-- pickr -->
@@ -200,19 +198,19 @@
             itemSelectText: '',
         });
     });
-</script>
 
-
-
-<!-- <script>
-    tinymce.init({
-        selector: 'textarea#email-content, textarea#edit-email-content',
-        plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-        toolbar_mode: 'floating',
-        toolbar: 'undo redo | formatselect | bold italic backcolor | \
-                  alignleft aligncenter alignright alignjustify | \
-                  bullist numlist outdent indent | removeformat',
-        menubar: false,
-        height: 300
+    document.addEventListener("DOMContentLoaded", function() {
+        const filterDate = new Choices('#filter-date', {
+            searchEnabled: false,
+            itemSelectText: '',
+        });
+        const filterProduct = new Choices('#filter-product', {
+            searchEnabled: false,
+            itemSelectText: '',
+        });
+        const filterStatus = new Choices('#filter-status', {
+            searchEnabled: false,
+            itemSelectText: '',
+        });
     });
-</script> -->
+</script>
