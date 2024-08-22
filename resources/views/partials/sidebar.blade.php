@@ -15,16 +15,22 @@
     </li>
     <li>
       <a href="{{ route('admin.workstations') }}" class="{{ Request::routeIs('admin.workstations') ? 'active' : '' }}">
-        <img src="{{ asset('icons/workstations.png') }}" alt="Workstations">Workstations
+        <img src="{{ asset('icons/workstations.png') }}" alt="Workstations">Production Team
       </a>
     </li>
+    <li>
+      <a href="{{ route('admin.notification') }}" class="{{ Request::is('notification*') ? 'active' : '' }}">
+        <img src="{{ asset('icons/notification.png') }}" alt="Settings">Notofications
+      </a>
+    </li>
+    <li>
     <li>
       <a href="{{ route('admin.settings') }}" class="{{ Request::is('settings*') ? 'active' : '' }}">
         <img src="{{ asset('icons/settings.png') }}" alt="Settings">Settings
       </a>
     </li>
     <li>
-      <a href="{{ route('logout') }}" class="{{ Request::routeIs('logout') ? 'active' : '' }}" onclick="event.preventDefault(); 
+      <a href="{{ route('logout') }}" class="{{ Request::routeIs('logout') ? 'active' : '' }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
         <img src="{{ asset('icons/logout.png') }}" alt="Logout">Logout
       </a>

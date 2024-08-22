@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    @vite(['resources/css/login.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{asset('assets/css/login.css')}}">
+{{--    @vite(['resources/css/login.css', 'resources/js/app.js'])--}}
 </head>
 
 <body>
-    <div class="login-container">
+    <img src="{{ asset('images/logo.png') }}" class="mx-auto" width="200px" alt="The Boudoir Album">
+    <div class="login-container flex-row">
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <h2>Login</h2>
@@ -36,6 +38,7 @@
             <button type="submit">Sign In</button>
         </form>
     </div>
+    <script src="{{asset('assets/js/app.js')}}"></script>
 </body>
 
 </html>
